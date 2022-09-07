@@ -13,13 +13,13 @@ body {
   text-align: center;
 }
 
-.app-container{
+.app-container {
   height: 100%;
 }
 
 .display {
   text-align: right;
-  color:white;
+  color: white;
   padding: 27px;
   background-color: grey;
 }
@@ -33,7 +33,7 @@ body {
   flex: 3;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(5,1fr);
+  grid-template-rows: repeat(5, 1fr);
   align-content: stretch;
   gap: 1px;
 }
@@ -43,11 +43,10 @@ body {
   align-items: center;
   justify-content: center;
   background-color: lightgrey;
-
 }
 
 .Zero {
-  grid-column: span 2 ;
+  grid-column: span 2;
 }
 
 .operations {
