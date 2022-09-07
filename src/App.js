@@ -2,13 +2,15 @@
 import React from 'react';
 import { Display, Keyboard, Operations } from './Components/calculator';
 
-class App extends React.Component {
+export default class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <Display />
-        <Operations />
-        <Keyboard />
+        <Display result={0} />
+        <div className="second-row">
+          <Keyboard />
+          <Operations />
+        </div>
       </div>
     );
   }

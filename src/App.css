@@ -1,0 +1,67 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 60%;
+  max-width: 500px;
+  height: 40%;
+  text-align: center;
+}
+
+.app-container{
+  height: 100%;
+}
+
+.display {
+  text-align: right;
+  color:white;
+  padding: 27px;
+  background-color: grey;
+}
+
+.second-row {
+  display: flex;
+  height: 100%;
+}
+
+.keyboard {
+  flex: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(5,1fr);
+  align-content: stretch;
+  gap: 1px;
+}
+
+.keyboard div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+
+}
+
+.Zero {
+  grid-column: span 2 ;
+}
+
+.operations {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 1px;
+}
+
+.operations div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+}

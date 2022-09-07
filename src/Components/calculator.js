@@ -1,10 +1,21 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable max-classes-per-file */
 import React from 'react';
 
 class Display extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
   render() {
-    return <div className="display" />;
+    return (
+      <div className="display">
+        { this.props.result }
+      </div>
+    );
   }
 }
 
