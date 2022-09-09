@@ -1,47 +1,30 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
+import Big from 'big.js';
 
-import React from 'react';
-import calculate from '../logic/calculate';
-
-const Display = (props) => (
-  <div className="display">
-    { props.state.total}
-    { props.state.operation }
-    { props.state.next }
-  </div>
-);
-
-const Operations = (props) => (
-  <div className="operations" onClick={props.handleClick}>
-    <div>/</div>
-    <div>x</div>
-    <div>-</div>
-    <div>+</div>
-    <div>=</div>
-  </div>
-);
-
-const Keyboard = (props) => (
-  <div className="keyboard" onClick={props.handleClick}>
-    <div>AC</div>
-    <div>+/-</div>
-    <div>%</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div className="Zero">0</div>
-    <div>.</div>
-  </div>
-);
-
-export { Keyboard, Operations, Display };
+export default function operate(numberOne, numberTwo, operation) {
+  const one = Big(numberOne);
+  const two = Big(numberTwo);
+  if (operation === '+') {
+    return one.plus(two).toString();
+  }
+  if (operation === '-') {
+    return one.minus(two).toString();
+  }
+  if (operation === 'x') {
+    return one.times(two).toString();
+  }
+  if (operation === '÷') {
+    try {
+      return one.div(two).toString();
+    } catch (err) {
+      return "Can't divide by 0.";
+    }
+  }
+  if (operation === '%') {
+    try {
+      return one.mod(two).toString();
+    } catch (err) {
+      return "Can't find modulo as can't divide by 0.";
+    }
+  }
+  throw Error(`Unknown operation '${operation}'`);
+}
