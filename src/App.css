@@ -44,6 +44,9 @@ body {
   justify-content: center;
   background-color: lightgrey;
 }
+.keyboard div:hover {
+  background-color: rgba(211, 211, 211, 0.541);
+}
 
 .Zero {
   grid-column: span 2;
@@ -63,4 +66,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color: orange;
+}
+
+.operations div:hover {
+  background-color:rgba(255, 166, 0, 0.493) ;
 }
