@@ -1,16 +1,18 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable max-classes-per-file */
 import React from 'react';
+import calculate from '../logic/calculate';
 
 class Display extends React.Component {
   render() {
     return (
       <div className="display">
-        { this.props.state.total }
+        { this.props.state.total}
         { this.props.state.operation }
         { this.props.state.next }
       </div>
