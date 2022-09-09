@@ -2,7 +2,7 @@
 
 # Math Magic 
 
-> A simple calculator web app, that will be created using react 
+> A simple calculator web app, that takes 2 numbers (or a previous total and a numbe)   and an operation then applies math logic to get you the result or the total 
 
 
 ## Built With

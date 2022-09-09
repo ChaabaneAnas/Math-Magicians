@@ -45,10 +45,6 @@ body {
   background-color: lightgrey;
 }
 
-.Zero {
-  grid-column: span 2;
-}
-
 .operations {
   flex: 1;
   display: flex;
@@ -63,4 +59,16 @@ body {
   align-items: center;
   justify-content: center;
   background-color: orange;
+}
+
+.keyboard div:hover {
+  background-color: rgba(211, 211, 211, 0.541);
+}
+
+.Zero {
+  grid-column: span 2;
+}
+
+.operations div:hover {
+  background-color: rgba(255, 166, 0, 0.493);
 }

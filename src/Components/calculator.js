@@ -1,19 +1,20 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable max-classes-per-file */
 import React from 'react';
+import calculate from '../logic/calculate';
 
 class Display extends React.Component {
-  constructor(props) {
-    super(props);
-    this.props = props;
-  }
-
   render() {
     return (
       <div className="display">
-        { this.props.result }
+        { this.props.state.total}
+        { this.props.state.operation }
+        { this.props.state.next }
       </div>
     );
   }
@@ -22,7 +23,7 @@ class Display extends React.Component {
 class Operations extends React.Component {
   render() {
     return (
-      <div className="operations">
+      <div className="operations" onClick={this.props.handleClick}>
         <div>/</div>
         <div>x</div>
         <div>-</div>
@@ -36,7 +37,7 @@ class Operations extends React.Component {
 class Keyboard extends React.Component {
   render() {
     return (
-      <div className="keyboard">
+      <div className="keyboard" onClick={this.props.handleClick}>
         <div>AC</div>
         <div>+/-</div>
         <div>%</div>
