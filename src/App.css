@@ -53,7 +53,7 @@ body {
   gap: 1px;
 }
 
-.operations div {
+.operations button {
   flex: 1;
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@ body {
   background-color: orange;
 }
 
-.keyboard div:hover {
+.keyboard button:hover {
   background-color: rgba(211, 211, 211, 0.541);
 }
 
@@ -69,6 +69,6 @@ body {
   grid-column: span 2;
 }
 
-.operations div:hover {
+.operations button:hover {
   background-color: rgba(255, 166, 0, 0.493);
 }

@@ -1,46 +1,44 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-
 import React from 'react';
-import calculate from '../logic/calculate';
 
-const Display = (props) => (
-  <div className="display">
-    { props.state.total}
-    { props.state.operation }
-    { props.state.next }
-  </div>
-);
+const Display = (props) => {
+  const { total, operation, next } = props.state;
+  return (
+    <div className="display">
+      { total }
+      { operation }
+      { next }
+    </div>
+  );
+};
 
 const Operations = (props) => (
-  <div className="operations" onClick={props.handleClick}>
-    <div>/</div>
-    <div>x</div>
-    <div>-</div>
-    <div>+</div>
-    <div>=</div>
+  <div className="operations">
+    <button type="button" onClick={props.handleClick}>/</button>
+    <button type="button" onClick={props.handleClick}>x</button>
+    <button type="button" onClick={props.handleClick}>-</button>
+    <button type="button" onClick={props.handleClick}>+</button>
+    <button type="button" onClick={props.handleClick}>=</button>
   </div>
 );
 
 const Keyboard = (props) => (
-  <div className="keyboard" onClick={props.handleClick}>
-    <div>AC</div>
-    <div>+/-</div>
-    <div>%</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div className="Zero">0</div>
-    <div>.</div>
+  <div className="keyboard">
+    <button type="button" onClick={props.handleClick}>AC</button>
+    <button type="button" onClick={props.handleClick}>+/-</button>
+    <button type="button" onClick={props.handleClick}>%</button>
+    <button type="button" onClick={props.handleClick}>7</button>
+    <button type="button" onClick={props.handleClick}>8</button>
+    <button type="button" onClick={props.handleClick}>9</button>
+    <button type="button" onClick={props.handleClick}>4</button>
+    <button type="button" onClick={props.handleClick}>5</button>
+    <button type="button" onClick={props.handleClick}>6</button>
+    <button type="button" onClick={props.handleClick}>1</button>
+    <button type="button" onClick={props.handleClick}>2</button>
+    <button type="button" onClick={props.handleClick}>3</button>
+    <button type="button" className="Zero" onClick={props.handleClick}>0</button>
+    <button type="button" onClick={props.handleClick}>.</button>
   </div>
 );
 
