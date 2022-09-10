@@ -1,60 +1,45 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable react/prefer-stateless-function */
-/* eslint-disable max-classes-per-file */
 import React from 'react';
-import calculate from '../logic/calculate';
 
-class Display extends React.Component {
-  render() {
-    return (
-      <div className="display">
-        { this.props.state.total}
-        { this.props.state.operation }
-        { this.props.state.next }
-      </div>
-    );
-  }
-}
+const Display = (props) => {
+  const { total, operation, next } = props.state;
+  return (
+    <div className="display">
+      { total }
+      { operation }
+      { next }
+    </div>
+  );
+};
 
-class Operations extends React.Component {
-  render() {
-    return (
-      <div className="operations" onClick={this.props.handleClick}>
-        <div>/</div>
-        <div>x</div>
-        <div>-</div>
-        <div>+</div>
-        <div>=</div>
-      </div>
-    );
-  }
-}
+const Operations = (props) => (
+  <div className="operations">
+    <button type="button" onClick={props.handleClick}>/</button>
+    <button type="button" onClick={props.handleClick}>x</button>
+    <button type="button" onClick={props.handleClick}>-</button>
+    <button type="button" onClick={props.handleClick}>+</button>
+    <button type="button" onClick={props.handleClick}>=</button>
+  </div>
+);
 
-class Keyboard extends React.Component {
-  render() {
-    return (
-      <div className="keyboard" onClick={this.props.handleClick}>
-        <div>AC</div>
-        <div>+/-</div>
-        <div>%</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div className="Zero">0</div>
-        <div>.</div>
-      </div>
-    );
-  }
-}
+const Keyboard = (props) => (
+  <div className="keyboard">
+    <button type="button" onClick={props.handleClick}>AC</button>
+    <button type="button" onClick={props.handleClick}>+/-</button>
+    <button type="button" onClick={props.handleClick}>%</button>
+    <button type="button" onClick={props.handleClick}>7</button>
+    <button type="button" onClick={props.handleClick}>8</button>
+    <button type="button" onClick={props.handleClick}>9</button>
+    <button type="button" onClick={props.handleClick}>4</button>
+    <button type="button" onClick={props.handleClick}>5</button>
+    <button type="button" onClick={props.handleClick}>6</button>
+    <button type="button" onClick={props.handleClick}>1</button>
+    <button type="button" onClick={props.handleClick}>2</button>
+    <button type="button" onClick={props.handleClick}>3</button>
+    <button type="button" className="Zero" onClick={props.handleClick}>0</button>
+    <button type="button" onClick={props.handleClick}>.</button>
+  </div>
+);
 
 export { Keyboard, Operations, Display };
