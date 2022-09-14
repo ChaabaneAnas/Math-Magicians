@@ -1,20 +1,20 @@
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-sizing: border-box;
+  padding: 0 15%;
+  margin: 0;
 }
 
 #root {
-  width: 60%;
-  max-width: 500px;
-  height: 40%;
-  text-align: center;
+  text-align: left;
+  height: 100%;
+  margin-top: 30%;
 }
 
 .app-container {
-  height: 100%;
+  width: 51%;
+  max-width: 500px;
+  height: 43%;
 }
 
 .display {
@@ -71,4 +71,36 @@ body {
 
 .operations button:hover {
   background-color: rgba(255, 166, 0, 0.493);
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  -webkit-box-shadow: 5px 10px 9px -3px rgba(0, 0, 0, 0.69);
+  box-shadow: 5px 10px 9px -3px rgba(0, 0, 0, 0.69);
+  background-color: orange;
+  padding: 0 10%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.Quote {
+  font-size: 2rem;
 }
