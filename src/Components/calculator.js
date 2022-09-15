@@ -1,45 +1,34 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React from 'react';
+import { Display, Keyboard, Operations } from './calculatorComponent';
+import calculate from '../logic/calculate';
 
-const Display = (props) => {
-  const { total, operation, next } = props.state;
-  return (
-    <div className="display">
-      { total }
-      { operation }
-      { next }
-    </div>
-  );
-};
+export default class Calculator extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+    };
+  }
 
-const Operations = (props) => (
-  <div className="operations">
-    <button type="button" onClick={props.handleClick}>/</button>
-    <button type="button" onClick={props.handleClick}>x</button>
-    <button type="button" onClick={props.handleClick}>-</button>
-    <button type="button" onClick={props.handleClick}>+</button>
-    <button type="button" onClick={props.handleClick}>=</button>
-  </div>
-);
+  componentDidMount() {
+    this.setState(calculate({}, 'AC'));
+  }
 
-const Keyboard = (props) => (
-  <div className="keyboard">
-    <button type="button" onClick={props.handleClick}>AC</button>
-    <button type="button" onClick={props.handleClick}>+/-</button>
-    <button type="button" onClick={props.handleClick}>%</button>
-    <button type="button" onClick={props.handleClick}>7</button>
-    <button type="button" onClick={props.handleClick}>8</button>
-    <button type="button" onClick={props.handleClick}>9</button>
-    <button type="button" onClick={props.handleClick}>4</button>
-    <button type="button" onClick={props.handleClick}>5</button>
-    <button type="button" onClick={props.handleClick}>6</button>
-    <button type="button" onClick={props.handleClick}>1</button>
-    <button type="button" onClick={props.handleClick}>2</button>
-    <button type="button" onClick={props.handleClick}>3</button>
-    <button type="button" className="Zero" onClick={props.handleClick}>0</button>
-    <button type="button" onClick={props.handleClick}>.</button>
-  </div>
-);
+  handleClick = (e) => {
+    this.setState((prevState) => calculate(prevState, e.target.textContent));
+  };
 
-export { Keyboard, Operations, Display };
+  render() {
+    return (
+      <div className="main">
+        <h2> Lets Do some Math </h2>
+        <div className="app-container">
+          <Display state={this.state} />
+          <div className="second-row">
+            <Keyboard handleClick={this.handleClick} />
+            <Operations handleClick={this.handleClick} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
