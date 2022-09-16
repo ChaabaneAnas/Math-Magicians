@@ -40,4 +40,3 @@ it('sould do the right operation',()=> {
     expect(operate(5,2,'%')).toBe("1")
 })
 
-
