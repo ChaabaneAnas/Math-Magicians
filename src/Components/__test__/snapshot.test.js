@@ -40,3 +40,10 @@ test('Testing Events: Calculator display should equal to 50', () => {
   const display = screen.getByText(/50/i, { selector: '.display' });
   expect(parseInt(display.textContent)).toBe(50);
 });
+// testing Home Component
+
+test('Testing Links: Click on Home should render Home page', () => {
+  render(<Home />);
+  const display = screen.getByText(/Welcome to our page/i);
+  expect(display).toMatchSnapshot();
+});
