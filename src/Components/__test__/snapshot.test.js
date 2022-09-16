@@ -47,3 +47,11 @@ test('Testing Links: Click on Home should render Home page', () => {
   const display = screen.getByText(/Welcome to our page/i);
   expect(display).toMatchSnapshot();
 });
+
+//Testing Quote Component
+
+test('Testing Links: Click on Home should render Home page', () => {
+  render(<Quote />);
+  const display = screen.getByText(/Mathematics/i);
+  expect(display).toMatchSnapshot();
+});
