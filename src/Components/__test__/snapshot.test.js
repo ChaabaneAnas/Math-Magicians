@@ -28,3 +28,15 @@ test('Testing Events: Calculator display should equal to 85', () => {
   const display = screen.getByText(/85/i, { selector: '.display' });
   expect(parseInt(display.textContent)).toBe(85);
 });
+
+test('Testing Events: Calculator display should equal to 50', () => {
+  const { getByText } = render(<Calculator />);
+  fireEvent.click(getByText(/2/i, { selector: 'button' }));
+  fireEvent.click(getByText(/x/i, { selector: 'button' }));
+  fireEvent.click(getByText(/5/i, { selector: 'button' }));
+  fireEvent.click(getByText(/x/i, { selector: 'button' }));
+  fireEvent.click(getByText(/5/i, { selector: 'button' }));
+  fireEvent.click(getByText(/=/i, { selector: 'button' }));
+  const display = screen.getByText(/50/i, { selector: '.display' });
+  expect(parseInt(display.textContent)).toBe(50);
+});
