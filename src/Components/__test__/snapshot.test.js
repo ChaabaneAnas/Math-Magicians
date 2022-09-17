@@ -1,11 +1,11 @@
+/* eslint-disable radix */
 import React from 'react';
-import Header from '../header';
-import Calculator from '../calculator';
-import App from '../../App';
-import Quote from '../Quote';
-import { Display } from '../calculatorComponent';
 import renderer from 'react-test-renderer';
-import { render, screen, fireEvent, cleanup } from '@testing-library/react';
+import {
+  render, screen, fireEvent, cleanup,
+} from '@testing-library/react';
+import Calculator from '../calculator';
+import Quote from '../Quote';
 import Home from '../home';
 
 afterEach(cleanup);
@@ -48,7 +48,7 @@ test('Testing Links: Click on Home should render Home page', () => {
   expect(display).toMatchSnapshot();
 });
 
-//Testing Quote Component
+// Testing Quote Component
 
 test('Testing Links: Click on Home should render Home page', () => {
   render(<Quote />);
