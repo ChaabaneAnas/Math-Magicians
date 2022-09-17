@@ -13,7 +13,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://6325ae11fcbd02398dda82b3--math-magicians-react001.netlify.app)
 
 
 ## Getting Started
