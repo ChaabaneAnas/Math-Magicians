@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator display should equal to 0 1`] = `
+<button
+  class="Zero"
+  type="button"
+>
+  0
+</button>
+`;
+
+exports[`Testing Links: Click on Home should render Home page 1`] = `
+<h2>
+  Welcome to our page
+</h2>
+`;
+
+exports[`Testing Links: Click on Home should render Home page 2`] = `
+<p
+  class="Quote"
+>
+  mathematics is not about numbers equations computations or algorithms its about understanding. ~~ William Paul thurston
+</p>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="main"
+>
+  <h2>
+     Lets Do some Math 
+  </h2>
+  <div
+    className="app-container"
+  >
+    <div
+      className="display"
+    />
+    <div
+      className="second-row"
+    >
+      <div
+        className="keyboard"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          AC
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          +/-
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          %
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          7
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          8
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          9
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          4
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          5
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          6
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          1
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          2
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          3
+        </button>
+        <button
+          className="Zero"
+          onClick={[Function]}
+          type="button"
+        >
+          0
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          .
+        </button>
+      </div>
+      <div
+        className="operations"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          /
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          x
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          -
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          +
+        </button>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
