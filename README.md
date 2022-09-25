@@ -4,6 +4,9 @@
 
 > A simple calculator web app, that takes 2 numbers (or a previous total and a numbe)   and an operation then applies math logic to get you the result or the total 
 
+## Overview 
+![image](https://user-images.githubusercontent.com/99597333/192149798-2044d18d-2e40-46fe-af16-fa86a88b0bd4.png)
+
 
 ## Built With
 
