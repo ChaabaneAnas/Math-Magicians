@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magic 
+# Math Magician
 
 > A simple calculator web app, that takes 2 numbers (or a previous total and a numbe)   and an operation then applies math logic to get you the result or the total 
 
